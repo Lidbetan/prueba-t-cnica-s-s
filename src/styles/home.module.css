@@ -25,9 +25,21 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+.profAndLoc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 .profession {
     color: #2b3f3f;
     font-weight: 600;
+}
+.location {
+    color: #3e5050;
+    font-weight: 600;
+    font-size: 14px;
 }
 .about,
 .hobbies,
@@ -39,8 +51,14 @@
     text-align: justify;
     font-size: 14px;
     line-height: 1.5rem;
+    gap: 4rem;
 }
 .hobbies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 .hobbies span {
@@ -63,6 +81,9 @@
     border: 0;
     color: black;
     font-weight: bolder;
+}
+.contact {
+    gap: 2rem;
 }
 .form {
     display: flex;

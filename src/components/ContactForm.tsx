@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "../styles/home.module.css";
 import { IFormData } from "@/interfaces/formData.interface";
 
-export function ContactForm() {
+export function ContactForm({ userFirstName }: { userFirstName: string }) {
     const [formData, setFormData] = useState<IFormData>({
         name: "",
         email: "",
@@ -29,6 +29,7 @@ export function ContactForm() {
             setIsValid(true);
             return isValid;
         } else {
+            //TODO - AGREGAR RESPUESTA CUANDO NO ES VALIDO
             alert("Por favor complete todos los campos");
         }
     };
@@ -36,7 +37,7 @@ export function ContactForm() {
     return (
         <>
             <section className={styles.contact}>
-                <h2>Deja tu mensaje</h2>
+                <h2>Contacta a {userFirstName}</h2>
                 <form
                     className={styles.form}
                     onSubmit={handleSubmit}

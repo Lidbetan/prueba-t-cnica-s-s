@@ -2,15 +2,19 @@
     "users": [
         {
             "userId": 1,
-            "name": "María González",
+            "firstName": "María",
+            "lastName": "González",
+            "location": "Rosario, Santa Fé, Argentina",
             "userImg": "/mid-age-woman.png",
             "profession": "Diseñadora gráfica",
             "about": "Tengo 48 años, apasionada por el arte digital y la ilustración. Trabajo en una agencia de publicidad y también realizo proyectos freelance.",
-            "hobbies": ["Pintura", "Viajar"]
+            "hobbies": ["Pintar", "Viajar"]
         },
         {
             "userId": 2,
-            "name": "Carlos Martínez",
+            "firstName": "Carlos",
+            "lastName": "Martínez",
+            "location": "Bariloche, Rio Negro, Argentina",
             "userImg": "/mid-age-man.png",
             "profession": "Ingeniero en Software",
             "about": "Tengo 54 años y trabajo en una startup de tecnología enfocada en el desarrollo de aplicaciones móviles. Me encanta aprender sobre nuevas tecnologías y mejorar mis habilidades de programación.",
@@ -18,7 +22,9 @@
         },
         {
             "userId": 3,
-            "name": "Laura Pérez",
+            "firstName": "Laura",
+            "lastName": "Pérez",
+            "location": "CABA, Buenos Aires, Argentina",
             "userImg": "/young-woman.png",
             "profession": "Abogada",
             "about": "Tego 27 años, me especializo en derecho ambiental. Trabajo en una ONG que lucha por la conservación de la naturaleza. En mi tiempo libre, me gusta participar en actividades comunitarias y voluntariados.",
@@ -26,7 +32,9 @@
         },
         {
             "userId": 4,
-            "name": "Juan Rodríguez",
+            "firstName": "Juan",
+            "lastName": "Rodríguez",
+            "location": "Salta, Salta, Argentina",
             "userImg": "/young-man.png",
             "profession": "Estudiante de Medicina",
             "about": "Tengo 25 años, estoy en mi último año de carrera y trabajo como asistente en un hospital. Me apasiona la investigación médica y la biotecnología.",

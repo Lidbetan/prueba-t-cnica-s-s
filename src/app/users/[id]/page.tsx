@@ -7,6 +7,7 @@ import { IUser } from "@/interfaces/user.interface";
 import { Header } from "@/components/Header";
 import BackButton from "@/components/BackButton";
 import { Proffesion } from "@/components/Proffesion";
+import { Location } from "@/components/Location";
 
 export default function User({ params }: { params: { id: number } }) {
     const { users }: { users: IUser[] } = usersProfiles;
@@ -17,16 +18,23 @@ export default function User({ params }: { params: { id: number } }) {
                 {users && (
                     <>
                         <Header
-                            userName={users[userIndex].name}
+                            userFirstName={users[userIndex].firstName}
+                            userLastName={users[userIndex].lastName}
                             userImg={users[userIndex].userImg}
                         />
-                        <Proffesion profession={users[userIndex].profession} />
+                        <div className={styles.profAndLoc}>
+                            <Proffesion
+                                profession={users[userIndex].profession}
+                            />
+                            <Location location={users[userIndex].location} />
+                        </div>
+
                         <About about={users[userIndex].about} />
                         <Hobbies hobbies={users[userIndex].hobbies} />
                         {/* <BackButton /> */}
                     </>
                 )}
-                <ContactForm />
+                <ContactForm userFirstName={users[userIndex].firstName} />
             </main>
         </>
     );

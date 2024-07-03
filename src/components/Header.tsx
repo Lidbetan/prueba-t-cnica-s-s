@@ -2,12 +2,15 @@ import Image from "next/image";
 import styles from "../styles/home.module.css";
 
 export function Header({
-    userName,
+    userFirstName,
+    userLastName,
     userImg,
 }: {
-    userName: string;
+    userFirstName: string;
+    userLastName: string;
     userImg: string;
 }) {
+    const completeName = `${userFirstName} ${userLastName}`;
     return (
         <>
             <header>
@@ -19,7 +22,7 @@ export function Header({
                         height={120}
                         className={styles.images}
                     />
-                    <h1>{userName}</h1>
+                    <h1>{completeName}</h1>
                 </div>
             </header>
         </>
