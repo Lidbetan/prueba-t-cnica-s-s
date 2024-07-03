@@ -4,32 +4,33 @@
             "userId": 1,
             "name": "María González",
             "userImg": "/mid-age-woman.png",
-            "about": "Soy una diseñadora gráfica de 48 años, apasionada por el arte digital y la ilustración. Trabajo en una agencia de publicidad y también realizo proyectos freelance.",
-            "interests": [
-                "Pintura y dibujo",
-                "Viajar y explorar nuevas culturas"
-            ]
+            "profession": "Diseñadora gráfica",
+            "about": "Tengo 48 años, apasionada por el arte digital y la ilustración. Trabajo en una agencia de publicidad y también realizo proyectos freelance.",
+            "hobbies": ["Pintura", "Viajar"]
         },
         {
             "userId": 2,
             "name": "Carlos Martínez",
             "userImg": "/mid-age-man.png",
-            "about": "Tengo 54 años y soy ingeniero de software. Trabajo en una startup de tecnología enfocada en el desarrollo de aplicaciones móviles. Me encanta aprender sobre nuevas tecnologías y mejorar mis habilidades de programación.",
-            "interests": ["Ciclismo de montaña", "Fabricar cerveza artesanal"]
+            "profession": "Ingeniero en Software",
+            "about": "Tengo 54 años y trabajo en una startup de tecnología enfocada en el desarrollo de aplicaciones móviles. Me encanta aprender sobre nuevas tecnologías y mejorar mis habilidades de programación.",
+            "hobbies": ["Ciclismo", "Naturaleza"]
         },
         {
             "userId": 3,
             "name": "Laura Pérez",
             "userImg": "/young-woman.png",
-            "about": "Soy una abogada de 27 años especializada en derecho ambiental. Trabajo en una ONG que lucha por la conservación de la naturaleza. En mi tiempo libre, me gusta participar en actividades comunitarias y voluntariados.",
-            "interests": ["Senderismo y camping", "Cocina vegetariana"]
+            "profession": "Abogada",
+            "about": "Tego 27 años, me especializo en derecho ambiental. Trabajo en una ONG que lucha por la conservación de la naturaleza. En mi tiempo libre, me gusta participar en actividades comunitarias y voluntariados.",
+            "hobbies": ["Senderismo", "Camping", "Cocina Saludable"]
         },
         {
             "userId": 4,
             "name": "Juan Rodríguez",
             "userImg": "/young-man.png",
-            "about": "Tengo 25 años y soy estudiante de medicina. Estoy en mi último año de carrera y trabajo como asistente en un hospital. Me apasiona la investigación médica y la biotecnología.",
-            "interests": ["Leer novelas de ciencia ficción", "Videojuegos"]
+            "profession": "Estudiante de Medicina",
+            "about": "Tengo 25 años, estoy en mi último año de carrera y trabajo como asistente en un hospital. Me apasiona la investigación médica y la biotecnología.",
+            "hobbies": ["Leer", "Videojuegos", "Padel"]
         }
     ]
 }

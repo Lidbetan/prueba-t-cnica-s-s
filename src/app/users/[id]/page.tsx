@@ -1,11 +1,12 @@
 import styles from "../../../styles/home.module.css";
 import { About } from "@/components/About";
-import { Interests } from "@/components/Interests";
+import { Hobbies } from "@/components/Hobbies";
 import { ContactForm } from "@/components/ContactForm";
 import usersProfiles from "../../../data/usersProfiles.json";
 import { IUser } from "@/interfaces/user.interface";
 import { Header } from "@/components/Header";
 import BackButton from "@/components/BackButton";
+import { Proffesion } from "@/components/Proffesion";
 
 export default function User({ params }: { params: { id: number } }) {
     const { users }: { users: IUser[] } = usersProfiles;
@@ -19,9 +20,10 @@ export default function User({ params }: { params: { id: number } }) {
                             userName={users[userIndex].name}
                             userImg={users[userIndex].userImg}
                         />
+                        <Proffesion profession={users[userIndex].profession} />
                         <About about={users[userIndex].about} />
-                        <Interests interests={users[userIndex].interests} />
-                        <BackButton />
+                        <Hobbies hobbies={users[userIndex].hobbies} />
+                        {/* <BackButton /> */}
                     </>
                 )}
                 <ContactForm />

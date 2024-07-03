@@ -1,23 +1,51 @@
 import styles from "../styles/home.module.css";
-import { About } from "@/components/About";
-import { Interests } from "@/components/Interests";
-import { ContactForm } from "@/components/ContactForm";
 
-import { Navbar } from "@/components/Navbar";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
-    // console.log(users);
-    // console.log(users[0]);
     return (
         <>
-            {/* <Navbar /> */}
             <main className={styles.main}>
-                <h1>Bienvenido, elija un usuario</h1>
-                <Link href="http://localhost:3000/users/1">Usuario 1</Link>
-                <Link href="http://localhost:3000/users/2">Usuario 2</Link>
-                <Link href="http://localhost:3000/users/3">Usuario 3</Link>
-                <Link href="http://localhost:3000/users/4">Usuario 4</Link>
+                <h1>
+                    Bienvenido, elija un <span>usuario</span>
+                </h1>
+                <Link href="http://localhost:3000/users/1">
+                    <Image
+                        src="/mid-age-woman.png"
+                        alt="user profile image"
+                        width={120}
+                        height={120}
+                        className={styles.images}
+                    />
+                </Link>
+                <Link href="http://localhost:3000/users/2">
+                    <Image
+                        src="/mid-age-man.png"
+                        alt="user profile image"
+                        width={120}
+                        height={120}
+                        className={styles.images}
+                    />
+                </Link>
+                <Link href="http://localhost:3000/users/3">
+                    <Image
+                        src="/young-woman.png"
+                        alt="user profile image"
+                        width={120}
+                        height={120}
+                        className={styles.images}
+                    />
+                </Link>
+                <Link href="http://localhost:3000/users/4">
+                    <Image
+                        src="/young-man.png"
+                        alt="user profile image"
+                        width={120}
+                        height={120}
+                        className={styles.images}
+                    />
+                </Link>
             </main>
         </>
     );

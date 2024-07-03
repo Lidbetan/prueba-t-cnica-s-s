@@ -2,6 +2,7 @@ export interface IUser {
     userId: number,
     name: string,
     userImg: string,
+    profession: string,
     about: string,
-    interests: string[]
+    hobbies: string[]
 }
