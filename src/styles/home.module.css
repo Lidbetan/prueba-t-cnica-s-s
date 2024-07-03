@@ -26,3 +26,10 @@
 .images {
     border-radius: 50%;
 }
+.backBtn {
+    border-radius: 28%;
+    background-color: rgb(198, 240, 85);
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+}

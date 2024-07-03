@@ -5,6 +5,7 @@ import { ContactForm } from "@/components/ContactForm";
 import usersProfiles from "../../../data/usersProfiles.json";
 import { IUser } from "@/interfaces/user.interface";
 import { Header } from "@/components/Header";
+import BackButton from "@/components/BackButton";
 
 export default function User({ params }: { params: { id: number } }) {
     const { users }: { users: IUser[] } = usersProfiles;
@@ -20,6 +21,7 @@ export default function User({ params }: { params: { id: number } }) {
                         />
                         <About about={users[userIndex].about} />
                         <Interests interests={users[userIndex].interests} />
+                        <BackButton />
                     </>
                 )}
                 <ContactForm />
