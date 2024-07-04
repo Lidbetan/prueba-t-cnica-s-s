@@ -9,20 +9,18 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
         email: "",
         message: "",
     });
-    const [isValid, setIsValid] = useState<Boolean>(false);
-    const [isLoading, setIsLoading] = useState<Boolean>(false);
-    const [error, setError] = useState<Boolean>(false);
-    const [incomplete, setIncomplete] = useState<Boolean>(false);
+    const [isValid, setIsValid] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState<boolean>(false);
+    const [incomplete, setIncomplete] = useState<boolean>(false);
 
     //Lee el valor de cada input y lo asigna al objeto formData
-    const handleInputChange = (e: any) => {
+    const handleInputChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-        if (
-            formData.name !== "" &&
-            formData.email !== "" &&
-            formData.message !== ""
-        ) {
+        setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+        if (formData.name && formData.email && formData.message) {
             setIncomplete(false);
         }
     };
@@ -30,31 +28,28 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
     //Lógica de validación básica del formulario
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (
-            formData.name !== "" &&
-            formData.email !== "" &&
-            formData.message !== ""
-        ) {
+        if (formData.name && formData.email && formData.message) {
             setIsLoading(true);
-            if (!error) {
-                //Permite renderizar de forma condicional el mensaje de éxito
-                setTimeout(() => {
-                    setIsLoading(false);
-                    setIsValid(true);
+            try {
+                await new Promise(() =>
+                    setTimeout(() => {
+                        setIsLoading(false);
+                        setIsValid(true);
 
-                    return isLoading && isValid && incomplete;
-                }, 3000);
-            } else {
+                        return isLoading && isValid && incomplete;
+                    }, 3000)
+                );
+            } catch {
                 setIsLoading(false);
+                setError(true);
                 return error && isLoading;
             }
         } else {
-            //TODO - AGREGAR RESPUESTA CUANDO NO ES VALIDO
             setIncomplete(true);
             return incomplete;
         }
     };
-    console.log(isLoading);
+
     return (
         <>
             <section className={userStyles.contact}>
@@ -112,13 +107,6 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                         ) : (
                             <span id="succesBtn">Cargando...</span>
                         )}
-                        {/* {!isValid ? (
-                            <button type="submit">Enviar</button>
-                        ) : (
-                            <span id="succesBtn">
-                                Mensaje enviado con éxito
-                            </span>
-                        )} */}
                     </div>
                 </form>
                 {incomplete && <span>Por favor complete todos los campos</span>}

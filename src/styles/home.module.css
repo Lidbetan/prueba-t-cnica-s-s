@@ -53,6 +53,18 @@
     -webkit-box-shadow: 0 0 40px 0px rgba(0, 0, 0);
     box-shadow: 0 0 40px 0px rgb(0, 0, 0);
 }
+.loadingSpan {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(
+        130deg,
+        rgb(45, 45, 243),
+        rgb(122, 74, 233),
+        indigo
+    );
+    background-clip: text;
+    color: transparent;
+}
 
 /*& Media Queries */
 @media (min-width: 768px) {
