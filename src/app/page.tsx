@@ -9,7 +9,7 @@ export default function Home() {
             <main className={styles.main}>
                 <div className={styles.bgDiv}>
                     <h1>
-                        Bienvenido, elija&nbsp;un&nbsp;<span>usuario</span>
+                        Bienvenido, elige&nbsp;un&nbsp;<span>usuario</span>
                     </h1>
                 </div>
                 <div className={styles.usersContainer}>

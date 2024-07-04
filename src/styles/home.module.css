@@ -17,7 +17,8 @@
         130deg,
         rgb(45, 45, 243),
         rgb(122, 74, 233),
-        indigo
+        rgb(255, 0, 170),
+        rgb(255, 0, 85)
     );
     background-clip: text;
     transition: background 3s ease;
@@ -54,7 +55,6 @@
 }
 
 /*& Media Queries */
-/* Contenedor de imágenes de usuarios de Home */
 @media (min-width: 768px) {
     .main {
         justify-content: center;

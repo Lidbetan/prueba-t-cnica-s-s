@@ -100,7 +100,7 @@
     padding: 3px;
 }
 .formDivs label {
-    font-size: 14px;
+    font-size: 12px;
     color: #2b4444;
 }
 .formDivs textarea {
@@ -113,7 +113,7 @@
 .form button {
     width: 100%;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #ee4266;
     text-align: center;
     border: 0;
@@ -147,4 +147,57 @@
     border: 0;
     color: black;
     font-weight: bolder;
+}
+/*& Media Queries */
+@media (min-width: 768px) {
+    .about {
+        width: 75%;
+        text-align: center;
+    }
+    .contact {
+        width: 75%;
+    }
+    .form {
+        position: relative;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 15px;
+        grid-template-areas:
+            "name textarea"
+            "email textarea"
+            "button button";
+        width: 85%;
+    }
+    .formDivs {
+        align-items: start;
+    }
+    .formDivs:nth-child(1) {
+        grid-area: name;
+    }
+    .formDivs:nth-child(2) {
+        grid-area: email;
+    }
+    .formDivs:nth-child(3) {
+        grid-area: textarea;
+    }
+    .formDivs:nth-child(4) {
+        grid-area: button;
+        margin: auto;
+        width: 50%;
+    }
+    .form button {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+        width: 50%;
+    }
+    .contact {
+        width: 35%;
+    }
 }

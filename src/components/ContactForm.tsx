@@ -21,8 +21,8 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (
-            formData.name !== "" ||
-            formData.email !== "" ||
+            formData.name !== "" &&
+            formData.email !== "" &&
             formData.message !== ""
         ) {
             //Permite renderizar de forma condicional el mensaje de éxito
@@ -79,11 +79,15 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                             onChange={handleInputChange}
                         />
                     </div>
-                    {!isValid ? (
-                        <button type="submit">Enviar</button>
-                    ) : (
-                        <span>Mensaje enviado con éxito</span>
-                    )}
+                    <div className={userStyles.formDivs}>
+                        {!isValid ? (
+                            <button type="submit">Enviar</button>
+                        ) : (
+                            <span id="succesBtn">
+                                Mensaje enviado con éxito
+                            </span>
+                        )}
+                    </div>
                 </form>
             </section>
         </>
