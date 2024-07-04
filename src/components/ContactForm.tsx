@@ -10,11 +10,21 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
         message: "",
     });
     const [isValid, setIsValid] = useState<Boolean>(false);
+    const [isLoading, setIsLoading] = useState<Boolean>(false);
+    const [error, setError] = useState<Boolean>(false);
+    const [incomplete, setIncomplete] = useState<Boolean>(false);
 
     //Lee el valor de cada input y lo asigna al objeto formData
     const handleInputChange = (e: any) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+        if (
+            formData.name !== "" &&
+            formData.email !== "" &&
+            formData.message !== ""
+        ) {
+            setIncomplete(false);
+        }
     };
 
     //Lógica de validación básica del formulario
@@ -25,15 +35,26 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
             formData.email !== "" &&
             formData.message !== ""
         ) {
-            //Permite renderizar de forma condicional el mensaje de éxito
-            setIsValid(true);
-            return isValid;
+            setIsLoading(true);
+            if (!error) {
+                //Permite renderizar de forma condicional el mensaje de éxito
+                setTimeout(() => {
+                    setIsLoading(false);
+                    setIsValid(true);
+
+                    return isLoading && isValid && incomplete;
+                }, 3000);
+            } else {
+                setIsLoading(false);
+                return error && isLoading;
+            }
         } else {
             //TODO - AGREGAR RESPUESTA CUANDO NO ES VALIDO
-            alert("Por favor complete todos los campos");
+            setIncomplete(true);
+            return incomplete;
         }
     };
-
+    console.log(isLoading);
     return (
         <>
             <section className={userStyles.contact}>
@@ -80,15 +101,27 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                         />
                     </div>
                     <div className={userStyles.formDivs}>
-                        {!isValid ? (
+                        {!isLoading && !isValid ? (
+                            <button type="submit">Enviar</button>
+                        ) : isValid ? (
+                            <span id="succesBtn">
+                                Mensaje enviado con éxito
+                            </span>
+                        ) : error ? (
+                            <span id="succesBtn">Ocurrió un error</span>
+                        ) : (
+                            <span id="succesBtn">Cargando...</span>
+                        )}
+                        {/* {!isValid ? (
                             <button type="submit">Enviar</button>
                         ) : (
                             <span id="succesBtn">
                                 Mensaje enviado con éxito
                             </span>
-                        )}
+                        )} */}
                     </div>
                 </form>
+                {incomplete && <span>Por favor complete todos los campos</span>}
             </section>
         </>
     );
