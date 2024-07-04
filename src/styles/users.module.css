@@ -198,6 +198,33 @@
         width: 50%;
     }
     .contact {
+        width: 50%;
+    }
+}
+@media (min-width: 1280px) {
+    .about {
+        width: 50%;
+    }
+    .contact {
+        width: 40%;
+    }
+
+    .formDivs {
+        align-items: center;
+    }
+
+    .form input textarea {
+        width: 50%;
+    }
+}
+@media (min-width: 1440px) {
+    .about {
         width: 35%;
+    }
+    .contact {
+        width: 30%;
+    }
+    .formDivs {
+        align-items: center;
     }
 }
