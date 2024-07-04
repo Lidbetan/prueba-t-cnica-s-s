@@ -1,9 +1,9 @@
-import styles from "../styles/home.module.css";
+import userStyles from "../styles/users.module.css";
 
 export function Location({ location }: { location: string }) {
     return (
         <>
-            <section className={styles.location}>
+            <section className={userStyles.location}>
                 <span>🌎</span>
                 <span>{location}</span>
             </section>

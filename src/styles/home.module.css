@@ -1,141 +1,81 @@
+/* Animaciones */
+
 .main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin: 1rem 0;
-    gap: 3rem;
+    gap: 4rem;
     min-height: 100dvh;
     padding: 20px 10px;
     width: 100%;
 }
 
-.header {
+.bgDiv {
+    background: linear-gradient(
+        130deg,
+        rgb(45, 45, 243),
+        rgb(122, 74, 233),
+        indigo
+    );
+    background-clip: text;
+    transition: background 3s ease;
+    width: 75%;
+}
+
+.main h1 {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100vw;
-    height: 80px;
-    padding: 10px 20px;
-    background-color: rgb(198, 240, 85);
-}
-.header {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.profAndLoc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-.profession {
-    color: #2b3f3f;
-    font-weight: 600;
-}
-.location {
-    color: #3e5050;
-    font-weight: 600;
-    font-size: 14px;
-}
-.about,
-.hobbies,
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    font-size: 14px;
-    line-height: 1.5rem;
-    gap: 4rem;
-}
-.hobbies {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: start;
+    font-size: 40px;
+    font-weight: bold;
+    color: transparent;
+    animation: zoom-in 1s ease-in-out both;
+}
+.usersContainer {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
+    width: 100%;
 }
-.hobbies span {
-    padding: 15px;
-    border-radius: 25px;
-    background-color: #e7dca9;
-    text-align: center;
-    border: 0;
-    font-weight: bold;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-.images {
+
+.imagesHome {
     border-radius: 50%;
+    transition: transform 2s ease-in-out, box-shadow 2s ease-in-out;
 }
-.backBtn {
-    border-radius: 28%;
-    background-color: #c6f055;
-    padding: 15px;
-    border: 0;
-    color: black;
-    font-weight: bolder;
+.imagesHome:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-box-shadow: 0 0 40px 0px rgba(0, 0, 0);
+    box-shadow: 0 0 40px 0px rgb(0, 0, 0);
 }
-.contact {
-    gap: 2rem;
+
+/*& Media Queries */
+/* Contenedor de imágenes de usuarios de Home */
+@media (min-width: 768px) {
+    .main {
+        justify-content: center;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .main h1 {
+        justify-content: center;
+    }
+
+    .usersContainer {
+        width: 60%;
+        gap: 5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 95vw;
-}
-.formDivs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.formDivs input {
-    width: 100%;
-    height: 35px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    font-size: 12px;
-    padding: 3px;
-}
-.formDivs label {
-    font-size: 14px;
-    color: #2b4444;
-}
-.formDivs textarea {
-    width: 100%;
-    min-height: 100px;
-    border-radius: 10px;
-    font-size: 12px;
-    padding: 3px;
-}
-.form button {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #ee4266;
-    text-align: center;
-    border: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.form span {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #5ef15e;
-    text-align: center;
-    border: 0;
-    font-weight: bold;
-    text-transform: uppercase;
+@media (min-width: 1024px) {
+    .usersContainer {
+        width: 80%;
+        gap: 5rem;
+        flex-direction: row;
+    }
 }

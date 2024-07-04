@@ -1,4 +1,5 @@
 import styles from "../../../styles/home.module.css";
+import userStyles from "../../../styles/users.module.css";
 import { About } from "@/components/About";
 import { Hobbies } from "@/components/Hobbies";
 import { ContactForm } from "@/components/ContactForm";
@@ -14,7 +15,7 @@ export default function User({ params }: { params: { id: number } }) {
     const userIndex = params.id - 1;
     return (
         <>
-            <main className={styles.main}>
+            <main className={userStyles.userMain}>
                 {users && (
                     <>
                         <Header
@@ -22,7 +23,7 @@ export default function User({ params }: { params: { id: number } }) {
                             userLastName={users[userIndex].lastName}
                             userImg={users[userIndex].userImg}
                         />
-                        <div className={styles.profAndLoc}>
+                        <div className={userStyles.profAndLoc}>
                             <Proffesion
                                 profession={users[userIndex].profession}
                             />
@@ -31,7 +32,7 @@ export default function User({ params }: { params: { id: number } }) {
 
                         <About about={users[userIndex].about} />
                         <Hobbies hobbies={users[userIndex].hobbies} />
-                        {/* <BackButton /> */}
+                        <BackButton />
                     </>
                 )}
                 <ContactForm userFirstName={users[userIndex].firstName} />

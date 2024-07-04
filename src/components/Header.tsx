@@ -1,6 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/home.module.css";
-
+import userStyles from "../styles/users.module.css";
 export function Header({
     userFirstName,
     userLastName,
@@ -14,15 +13,15 @@ export function Header({
     return (
         <>
             <header>
-                <div className={styles.header}>
+                <div className={userStyles.header}>
                     <Image
                         src={userImg}
                         alt="user profile image"
                         width={120}
                         height={120}
-                        className={styles.images}
+                        className={userStyles.images}
                     />
-                    <h1>{completeName}</h1>
+                    <h2 className={userStyles.pageH1}>{completeName}</h2>
                 </div>
             </header>
         </>

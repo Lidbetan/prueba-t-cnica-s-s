@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "../styles/home.module.css";
+import userStyles from "../styles/users.module.css";
 import { IFormData } from "@/interfaces/formData.interface";
 
 export function ContactForm({ userFirstName }: { userFirstName: string }) {
@@ -36,14 +36,17 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
 
     return (
         <>
-            <section className={styles.contact}>
-                <h2>Contacta a {userFirstName}</h2>
+            <section className={userStyles.contact}>
+                <h2>
+                    Contacta a{" "}
+                    <span className={userStyles.userSpan}>{userFirstName}</span>
+                </h2>
                 <form
-                    className={styles.form}
+                    className={userStyles.form}
                     onSubmit={handleSubmit}
                     method="post"
                 >
-                    <div className={styles.formDivs}>
+                    <div className={userStyles.formDivs}>
                         <label htmlFor="name">Nombre y Apellido</label>
                         <input
                             type="text"
@@ -54,7 +57,7 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                             onChange={handleInputChange}
                         />
                     </div>
-                    <div className={styles.formDivs}>
+                    <div className={userStyles.formDivs}>
                         <label htmlFor="email">Email</label>
                         <input
                             type="email"
@@ -65,7 +68,7 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                             onChange={handleInputChange}
                         />
                     </div>
-                    <div className={styles.formDivs}>
+                    <div className={userStyles.formDivs}>
                         <label htmlFor="message">Mensaje</label>
                         <textarea
                             id="message"

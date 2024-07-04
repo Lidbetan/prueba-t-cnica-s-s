@@ -1,10 +1,10 @@
 import Link from "next/link";
-import styles from "../styles/home.module.css";
+import userStyles from "../styles/users.module.css";
 
 export default function BackButton() {
     return (
         <>
-            <button className={styles.backBtn}>
+            <button className={userStyles.backBtn}>
                 <Link href="/">BACK</Link>
             </button>
         </>
