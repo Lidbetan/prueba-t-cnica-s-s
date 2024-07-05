@@ -1,3 +1,6 @@
+
+![responsiveDesign](https://github.com/Lidbetan/prueba-tecnica/assets/131318671/4f5c3c5c-1eb9-4083-8bd2-583dc20f6e2d)
+
 # Prueba Técnica Security & Systems
 
 Página web de un perfil de usuario que incluye información básica, una lista de intereses y una sección de contacto.
