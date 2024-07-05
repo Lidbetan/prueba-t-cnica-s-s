@@ -46,7 +46,7 @@ Para instalar el proyecto, primero debe clonar el respositorio de Github, siguie
     4. Ctrl + Shift + P > Clone > Pegar url
     5. Abra el proyecto.
 
-A continuación debe instalar las dependencias, para ello abra una terminal tanto en la carpeta front como back y escriba la siguiente línea de código:
+A continuación debe instalar las dependencias, para ello abra una terminal y escriba la siguiente línea de código:
 ```bash
   npm install
 ```
