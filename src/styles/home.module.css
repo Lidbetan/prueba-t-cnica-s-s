@@ -1,4 +1,28 @@
 /* Animaciones */
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
 
 .main {
     display: flex;
@@ -13,6 +37,16 @@
 }
 
 .bgDiv {
+    width: 75%;
+}
+
+.main h1 {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 3.5rem;
+    justify-content: start;
+    font-size: 40px;
+    font-weight: bold;
     background: linear-gradient(
         130deg,
         rgb(45, 45, 243),
@@ -21,18 +55,10 @@
         rgb(255, 0, 85)
     );
     background-clip: text;
-    transition: background 3s ease;
-    width: 75%;
-}
-
-.main h1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    font-size: 40px;
-    font-weight: bold;
     color: transparent;
-    animation: zoom-in 1s ease-in-out both;
+    -webkit-animation: text-focus-in 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 .usersContainer {
     display: flex;
@@ -45,7 +71,10 @@
 
 .imagesHome {
     border-radius: 50%;
-    transition: transform 2s ease-in-out, box-shadow 2s ease-in-out;
+    -webkit-animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
 }
 .imagesHome:hover {
     -webkit-transform: scale(1.1);

@@ -95,6 +95,11 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                             onChange={handleInputChange}
                         />
                     </div>
+                    {incomplete && (
+                        <span className={userStyles.incompleteSpan}>
+                            Por favor complete todos los campos
+                        </span>
+                    )}
                     <div className={userStyles.formDivs}>
                         {!isLoading && !isValid ? (
                             <button type="submit">Enviar</button>
@@ -105,11 +110,12 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                         ) : error ? (
                             <span id="succesBtn">Ocurrió un error</span>
                         ) : (
-                            <span id="succesBtn">Cargando...</span>
+                            <span className={userStyles.loadingSpan}>
+                                Cargando...
+                            </span>
                         )}
                     </div>
                 </form>
-                {incomplete && <span>Por favor complete todos los campos</span>}
             </section>
         </>
     );
