@@ -1,4 +1,4 @@
-import LocationIcon from "@/app/icons/locationIcon";
+import LocationIcon from "@/components/icons/locationIcon";
 import userStyles from "../styles/users.module.css";
 
 export function Location({ location }: { location: string }) {

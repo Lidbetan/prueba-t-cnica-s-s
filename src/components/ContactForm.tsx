@@ -9,12 +9,16 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
         email: "",
         message: "",
     });
+    //Estado que determina la validez del formulario
     const [isValid, setIsValid] = useState<boolean>(false);
+    //Estado que simula el envío de datos
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    //Estado que determina si hay error en el envío de datos
     const [error, setError] = useState<boolean>(false);
+    //Estado que determina si el formulario está incompleto y permite arrojar un alerta
     const [incomplete, setIncomplete] = useState<boolean>(false);
 
-    //Lee el valor de cada input y lo asigna al objeto formData
+    //Lee el valor de cada input y lo asigna al objeto formData.
     const handleInputChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
@@ -35,7 +39,6 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                     setTimeout(() => {
                         setIsLoading(false);
                         setIsValid(true);
-
                         return isLoading && isValid && incomplete;
                     }, 3000)
                 );
@@ -104,14 +107,12 @@ export function ContactForm({ userFirstName }: { userFirstName: string }) {
                         {!isLoading && !isValid ? (
                             <button type="submit">Enviar</button>
                         ) : isValid ? (
-                            <span id="succesBtn">
-                                Mensaje enviado con éxito
-                            </span>
+                            <span>Mensaje enviado con éxito</span>
                         ) : error ? (
-                            <span id="succesBtn">Ocurrió un error</span>
+                            <span>Ocurrió un error</span>
                         ) : (
                             <span className={userStyles.loadingSpan}>
-                                Cargando...
+                                Enviando...
                             </span>
                         )}
                     </div>

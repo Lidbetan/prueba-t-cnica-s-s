@@ -1,7 +1,5 @@
 import styles from "../styles/home.module.css";
-
-import Link from "next/link";
-import Image from "next/image";
+import { User } from "@/components/User";
 
 export default function Home() {
     return (
@@ -13,42 +11,10 @@ export default function Home() {
                     </h1>
                 </div>
                 <div className={styles.usersContainer}>
-                    <Link href="http://localhost:3000/users/1">
-                        <Image
-                            src="/mid-age-woman.png"
-                            alt="user profile image"
-                            width={120}
-                            height={120}
-                            className={styles.imagesHome}
-                        />
-                    </Link>
-                    <Link href="http://localhost:3000/users/2">
-                        <Image
-                            src="/mid-age-man.png"
-                            alt="user profile image"
-                            width={120}
-                            height={120}
-                            className={styles.imagesHome}
-                        />
-                    </Link>
-                    <Link href="http://localhost:3000/users/3">
-                        <Image
-                            src="/young-woman.png"
-                            alt="user profile image"
-                            width={120}
-                            height={120}
-                            className={styles.imagesHome}
-                        />
-                    </Link>
-                    <Link href="http://localhost:3000/users/4">
-                        <Image
-                            src="/young-man.png"
-                            alt="user profile image"
-                            width={120}
-                            height={120}
-                            className={styles.imagesHome}
-                        />
-                    </Link>
+                    <User id={1} />
+                    <User id={2} />
+                    <User id={3} />
+                    <User id={4} />
                 </div>
             </main>
         </>

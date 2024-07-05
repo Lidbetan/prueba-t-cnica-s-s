@@ -1,3 +1,4 @@
+/* Animaciones loadingSpan & BackButton */
 @-webkit-keyframes heartbeat {
     from {
         -webkit-transform: scale(1);
@@ -209,7 +210,7 @@
     text-transform: uppercase;
 }
 .loadingSpan {
-    background-color: #c9f354 !important;
+    background-color: #f3f054 !important;
     -webkit-animation: heartbeat 4s ease-in-out infinite both;
     animation: heartbeat 4s ease-in-out infinite both;
 }
@@ -308,9 +309,8 @@
     .contact {
         width: 40%;
     }
-
     .formDivs {
-        align-items: center;
+        align-items: flex-start;
     }
 
     .form input textarea {
@@ -323,8 +323,5 @@
     }
     .contact {
         width: 30%;
-    }
-    .formDivs {
-        align-items: center;
     }
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import userStyles from "../styles/users.module.css";
-import HomeIcon from "@/app/icons/homeIcon";
+import HomeIcon from "./icons/homeIcon";
 
 export default function BackButton() {
     return (

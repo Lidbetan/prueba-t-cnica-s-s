@@ -1,4 +1,3 @@
-import styles from "../../../styles/home.module.css";
 import userStyles from "../../../styles/users.module.css";
 import { About } from "@/components/About";
 import { Hobbies } from "@/components/Hobbies";
@@ -10,6 +9,7 @@ import BackButton from "@/components/BackButton";
 import { Proffesion } from "@/components/Proffesion";
 import { Location } from "@/components/Location";
 
+//Se renderizan los usuarios y su información de forma dinámica obteniendo el número de usuario a través de url params
 export default function User({ params }: { params: { id: number } }) {
     const { users }: { users: IUser[] } = usersProfiles;
     const userIndex = params.id - 1;
