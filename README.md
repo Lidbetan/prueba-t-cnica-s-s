@@ -1,3 +1,6 @@
+
+![responsiveDesign](https://github.com/Lidbetan/prueba-tecnica/assets/131318671/4f5c3c5c-1eb9-4083-8bd2-583dc20f6e2d)
+
 # Prueba Técnica Security & Systems
 
 Página web de un perfil de usuario que incluye información básica, una lista de intereses y una sección de contacto.
@@ -43,7 +46,7 @@ Para instalar el proyecto, primero debe clonar el respositorio de Github, siguie
     4. Ctrl + Shift + P > Clone > Pegar url
     5. Abra el proyecto.
 
-A continuación debe instalar las dependencias, para ello abra una terminal tanto en la carpeta front como back y escriba la siguiente línea de código:
+A continuación debe instalar las dependencias, para ello abra una terminal y escriba la siguiente línea de código:
 ```bash
   npm install
 ```
