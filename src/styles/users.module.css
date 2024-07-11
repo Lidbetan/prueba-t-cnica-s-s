@@ -198,6 +198,12 @@
     border: 0;
     font-weight: bold;
     text-transform: uppercase;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+}
+.form button:hover {
+    transform: scale(1, 1.1);
+    background-color: #f12551;
 }
 .form span {
     width: 100%;
@@ -292,6 +298,9 @@
         font-size: 12px;
         text-align: center;
     }
+    .form button:hover {
+        transform: scale(1.1);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -300,6 +309,9 @@
     }
     .contact {
         width: 50%;
+    }
+    .formDivs:nth-child(4) {
+        width: 35%;
     }
 }
 @media (min-width: 1280px) {
@@ -312,7 +324,9 @@
     .formDivs {
         align-items: flex-start;
     }
-
+    .formDivs:nth-child(4) {
+        width: 30%;
+    }
     .form input textarea {
         width: 50%;
     }
@@ -323,5 +337,8 @@
     }
     .contact {
         width: 30%;
+    }
+    .formDivs:nth-child(4) {
+        width: 25%;
     }
 }
