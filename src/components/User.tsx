@@ -10,7 +10,7 @@ export function User({ id }: { id: number }) {
     const getImg = users.filter((user) => user.userId === id);
     return (
         <>
-            <Link href={`http://localhost:3000/users/${id}`}>
+            <Link href={`https://users-profiles.vercel.app/users/${id}`}>
                 <Image
                     src={getImg[0].userImg}
                     alt="user profile image"
