@@ -60,6 +60,8 @@ Finalmente haga Ctrl + Click en el link local:
 
 ![Captura](https://github.com/Lidbetan/prueba-tecnica/assets/131318671/a56d96d1-dfac-4269-8d9d-992543465ca7)
 
+## Deploy
 
+https://lnkd.in/dZbzA-Bv
 
 
