@@ -62,6 +62,6 @@ Finalmente haga Ctrl + Click en el link local:
 
 ## Deploy
 
-https://lnkd.in/dZbzA-Bv
+https://users-profiles.vercel.app/
 
 
